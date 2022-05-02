@@ -1,0 +1,122 @@
+body{
+    background-color: #f3f3f3;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    width:100%;
+    height:60px;
+    font-family: "Calibri Light";
+    font-size: medium;
+
+}
+
+.topnav img{
+    width: 100px;
+    height:40px;
+    object-fit: cover;
+}
+
+.topnav  a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.index-banner {
+    width: 100%;
+    height: 100vh;
+    background-image:url("resources/background-img.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+
+.index-banner h1{
+    font-family: Serif, serif ;
+    font-size: 50px;
+    color:#fff;
+    text-shadow: 5px 5px 7px #111;
+    text-align: center;
+
+}
+
+.block-display-vertical button{
+    margin-left: -20px;
+    margin-bottom:65px;
+    display:block;
+    transform: rotate(90deg);
+}
+.button{
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 16px;
+    cursor: pointer;
+    width: 110px;
+    height:40px;
+    border-radius: 5px;
+
+}
+
+.form h1{
+    font-family: Serif, serif ;
+    font-size: 50px;
+    color:#fff;
+    text-shadow: 7px 6px 10px #111;
+    text-align: center;
+}
+
+.form label{
+    font-family: "Comic Sans MS" ;
+    color:#fff;
+    font-size: 20px;
+    position: relative;
+    top: 70px;
+    left: 450px;
+    text-shadow: 7px 6px 10px #111;
+}
+
+.form button{
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: Calibri;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90px;
+    height:25px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 30px;
+    top:100px;
+    left: 500px;
+
+}
+
+
+.login-banner{
+    width: 100%;
+    height: 100vh;
+    background-image:url("resources/login-bck.jpg") ;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
