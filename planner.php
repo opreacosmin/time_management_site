@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,20 @@
             <a href="index.php"><img src="resources/logo.png"</a>
             <nav>
                 <ul>
-                    <li><a href="login.php">Login</a></li>
+                    <?php
+                    if(isset($_SESSION["userid"]))
+                    {
+                        ?>
+                        <li><a href="includes/logout.inc.php">Logout</a></li>
+
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <li><a href="login.php">Login</a></li>
+                        <?php
+                    }
+                    ?>
                     <li><a href="register.php">Sign up</a></li>
                     <li><a href="planner.php">My planner</a></li>
 
