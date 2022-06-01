@@ -51,8 +51,8 @@ session_start();
         }
         else{
             ?>
-            <button>login</button>
-            <button>signup</button>
+            <button onclick="location.href='login.php'">login</button>
+            <button onclick="location.href='register.php'">signup</button>
             <?php
         }
         ?>
