@@ -12,34 +12,62 @@
             <a href="index.php"><img src="resources/logo.png"</a>
             <nav>
                 <ul>
-                    <li><a href="login.php">Login</a></li>
+                    <?php
+                    if(isset($_SESSION["userid"]))
+                    {
+                        ?>
+                        <li><a href="includes/logout.inc.php">Logout</a></li>
+
+                    <?php
+                    }
+                    else{
+                        ?>
+                        <li><a href="login.php">Login</a></li>
+                        <?php
+                    }
+                    ?>
+
                     <li><a href="register.php">Sign up</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="planner.php">My planner</a></li>
+
 
                 </ul>
             </nav>
         </div>
-
-        <div class="form">
+        <div class="container1-form">
             <h1>Login</h1>
-            <form method="post" action="includes/login.inc.php">
+            <img src="resources/profileicon.png">
+            <div class="form">
+                <form method="post" action="includes/login.inc.php">
 
-                <div>
-                    <label>
-                        Email
-                        <input type="text" name="email" value=""/>
-                    </label>
-                </div>
-                <div>
-                    <label>
+                    <div>
+                        <label>
+                            Username/email:
+                            <input type="text" name="username" placeholder="enter username or email">
+                        </label>
+                    </div>
 
-                        Password:
-                        <input type="password" name="password" value=""/>
-                    </label>
-                </div>
-                <button type="submit">Login</button>
-            </form>
+                    <div>
+                        <label>
+                            Password:
+                            <input type="password" name="password" placeholder="enter password">
+                        </label>
+                    </div>
+                    <button type="submit" name="submit">Login</button>
+                </form>
+            </div>
+
         </div>
     </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <h1>"The key is in not spending time, but in investing it." -- Stephen R. Covey</h1>
+            <h2> About </h2>
+            <p> Plan your weekly tasks</p>
+            <div class="copyright">oprea cosmin © 2022</div>
+        </div>
+    </div>
+
 </body>
 

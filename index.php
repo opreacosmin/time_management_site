@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,28 +18,63 @@
     <div class="topnav">
         <a href="index.php"> <img src="resources/logo.png"</a>
         <ul>
-            <li><a href="login.php">Login</a></li>
+            <?php
+            if(isset($_SESSION["userid"]))
+            {
+                ?>
+                <li><a href="includes/logout.inc.php">Logout</a></li>
+
+                <?php
+            }
+            else{
+                ?>
+                <li><a href="login.php">Login</a></li>
+                <?php
+            }
+            ?>
             <li><a href="register.php">Sign up</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="planner.php">My planner</a></li>
+
         </ul>
     </div>
-    <h1>Start planning now</h1>
-    <div class="block-display-vertical">
-        <button class="button">Monday</button>
-        <button class="button">Tuesday</button>
-        <button class="button">Wednesday</button>
-        <button class="button">Thursday</button>
-        <button class="button">Friday</button>
-        <button class="button">Saturday</button>
-        <button class="button">Sunday</button>
+
+    <h2> Start plannning now !</h2>
+
+    <div class="btn-group">
+        <?php
+        if(isset($_SESSION["userid"]))
+        {
+            ?>
+            <button onclick="location.href='planner.php'"> get started</button>
+            <button onclick="location.href='register.php'">signup</button>
+            <?php
+        }
+        else{
+            ?>
+            <button>login</button>
+            <button>signup</button>
+            <?php
+        }
+        ?>
+
     </div>
 
 
 
+
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        <h1>"The key is in not spending time, but in investing it." -- Stephen R. Covey</h1>
+   <h2> About </h2>
+        <p> Plan your weekly tasks</p>
+    <div class="copyright">oprea cosmin © 2022</div>
+    </div>
 </div>
 
 
 </body>
 </html>
 
-<?php
+
